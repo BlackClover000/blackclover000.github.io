@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ammar Mohamed | Full Stack .NET Developer in Minya, Egypt</title>
+<meta name="description" content="Full Stack .NET developer building websites, booking systems and web apps with C#, ASP.NET and SQL Server. Available for freelance projects.">
+<meta property="og:title" content="Ammar Mohamed | Full Stack .NET Developer">
+<meta property="og:description" content="Websites and web apps with C#, ASP.NET and SQL Server. See live demos of my work.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%235b3fd0'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --ink:#14202b; --muted:#53606d;
+  --line:#d9dfe6; --accent:#5b3fd0; --accent-ink:#ffffff; --accent-soft:#e9e5fb;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10131a; --surface:#181c26; --ink:#e8ebf2; --muted:#a3adbb;
+    --line:#2a3040; --accent:#a99bff; --accent-ink:#14101f; --accent-soft:#262240;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+h3{font-size:1.3rem;font-weight:700}
+p{margin:0 0 14px;max-width:64ch}
+
+header.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.nav strong{font-family:var(--display);font-size:1.1rem}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav a{text-decoration:none;color:var(--muted);font-weight:600}
+.nav a:hover{color:var(--ink)}
+
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.035em}
+.hero .lead{font-size:1.25rem;color:var(--muted);margin:18px 0 6px}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;margin:14px 0 26px}
+.status::before{content:"";width:10px;height:10px;border-radius:50%;background:#2aa66a}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{background:var(--accent-soft)}
+.portrait{width:340px;height:340px;max-width:100%;border-radius:50%;object-fit:cover;border:5px solid var(--accent)}
+
+section{padding:64px 0;border-top:1px solid var(--line)}
+.note{color:var(--muted);margin-bottom:32px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.frame{display:block;position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--accent-soft);border-bottom:1px solid var(--line)}
+.frame iframe{position:absolute;top:0;left:0;width:1280px;height:800px;border:0;transform-origin:0 0;pointer-events:none}
+.card .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.badge{align-self:flex-start;font-size:.85rem;font-weight:600;background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.tags span{font-size:.9rem;color:var(--muted);border:1px solid var(--line);padding:1px 10px;border-radius:6px}
+.links{display:flex;gap:18px;font-weight:600}
+.links a{color:var(--accent)}
+.next{margin-top:36px;padding:22px 24px;border:2px dashed var(--line);border-radius:14px}
+.next h3{margin-bottom:8px}
+.next ul{margin:0;padding-left:20px}
+.wide{display:grid;grid-template-columns:1fr 1fr;margin-top:24px}
+.term{background:#0e1116;color:#d6e2ee;font:14px/1.7 ui-monospace,Consolas,'Courier New',monospace;padding:24px;white-space:pre;overflow-x:auto;display:flex;align-items:center}
+.wide .body{justify-content:center}
+@media (max-width:760px){.wide{grid-template-columns:1fr}}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.skills h3{font-size:1.05rem;margin:0 0 8px}
+.skills ul,.edu{list-style:none;margin:0 0 22px;padding:0}
+.skills li{display:inline-block;margin:0 8px 8px 0;padding:4px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.edu li{padding:12px 0;border-bottom:1px solid var(--line)}
+.edu small{display:block;color:var(--muted)}
+
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted)}
+.contact-links{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0 0}
+
+@media (max-width:980px){.hero .wrap{grid-template-columns:1fr 260px}.portrait{width:260px;height:260px}}
+@media (max-width:760px){
+  .hero .wrap,.two{grid-template-columns:1fr}
+  .portrait{order:-1;width:240px;height:240px}
+  .nav ul{gap:14px}
+  .hero{padding-top:40px}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <strong>Ammar Mohamed</strong>
+    <nav aria-label="Main"><ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Hi, I’m Ammar.</h1>
+      <p class="lead">I build websites and web applications with ASP.NET and SQL Server.</p>
+      <div class="status">Available for freelance projects</div>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <!-- Replace portrait.jpg with the file name of your existing photo -->
+    <img class="portrait" src="portrait.jpg" alt="Portrait of Ammar Mohamed" onerror="this.style.display='none'">
+  </div>
+</div>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="note">These three are front-end demos built for real kinds of clients: a café, a clinic and a personal finance app. Each preview below is the live site. The full-stack ASP.NET projects are in progress.</p>
+    <div class="grid">
+
+      <article class="card">
+        <a class="frame" href="https://blackclover000.github.io/sunset-roastery/" target="_blank" rel="noopener" aria-label="Open the Sunset Roastery live demo">
+          <iframe src="https://blackclover000.github.io/sunset-roastery/" title="Preview of Sunset Roastery" loading="lazy" tabindex="-1"></iframe>
+        </a>
+        <div class="body">
+          <span class="badge">Front-end demo</span>
+          <h3>Sunset Roastery</h3>
+          <p>An Arabic, right-to-left café website with a menu, an order form that adds up the total, and a choice between pickup and delivery.</p>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+          <div class="links">
+            <a href="https://blackclover000.github.io/sunset-roastery/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/BlackClover000/sunset-roastery" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="frame" href="https://blackclover000.github.io/the-clinic/" target="_blank" rel="noopener" aria-label="Open the Nour Clinic live demo">
+          <iframe src="https://blackclover000.github.io/the-clinic/" title="Preview of Nour Clinic" loading="lazy" tabindex="-1"></iframe>
+        </a>
+        <div class="body">
+          <span class="badge">Front-end demo</span>
+          <h3>Nour Dental Clinic</h3>
+          <p>An appointment booking flow in Arabic: the patient picks a service, a day and a time, enters their details and confirms.</p>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+          <div class="links">
+            <a href="https://blackclover000.github.io/the-clinic/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/BlackClover000/the-clinic" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="frame" href="https://blackclover000.github.io/masrofy/" target="_blank" rel="noopener" aria-label="Open the Masrofy live demo">
+          <iframe src="https://blackclover000.github.io/masrofy/" title="Preview of Masrofy" loading="lazy" tabindex="-1"></iframe>
+        </a>
+        <div class="body">
+          <span class="badge">Front-end demo</span>
+          <h3>Masrofy</h3>
+          <p>An expense tracker with category totals and a monthly budget. Add or delete an expense in the demo and the numbers update straight away.</p>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+          <div class="links">
+            <a href="https://blackclover000.github.io/masrofy/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/BlackClover000/masrofy" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <article class="card wide">
+      <div class="term" role="img" aria-label="Console menu of the Library Books System">=== Library Books System ===
+1. Add Book
+2. View All Books
+3. Search by Title
+4. View Available Books
+5. Borrow Book
+6. Return Book
+7. Exit
+Choose: _</div>
+      <div class="body">
+        <span class="badge">C# console app, team project</span>
+        <h3>Library Books System</h3>
+        <p>A console application for running a small library: add books, search by title, list the available ones, and borrow or return a book by its ID, with input validation. Built with my DEPI team and covered by xUnit tests for the validation layer.</p>
+        <div class="tags"><span>C#</span><span>.NET 9</span><span>xUnit</span></div>
+        <div class="links">
+          <a href="https://github.com/BlackClover000/Depi_Project-.Net-" target="_blank" rel="noopener">Source code</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="next">
+      <h3>In progress: full-stack projects</h3>
+      <ul>
+        <li>Booking system with an admin page, built with ASP.NET Core and SQL Server</li>
+        <li>Inventory management system for products, stock and suppliers, built with ASP.NET and SQL Server</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap two">
+    <div>
+      <h2>About me</h2>
+      <p>I’m a software engineer and Full Stack .NET web developer based in Minya, Egypt. I build websites and web applications with C#, ASP.NET and SQL Server, and I style the front end with HTML5, CSS3, JavaScript and Bootstrap.</p>
+      <p>I’m also studying Cyber Security, so while I build an application I think about how it could be attacked, not only how it works.</p>
+    </div>
+    <div id="skills" class="skills">
+      <h2>Skills</h2>
+      <h3>Back end</h3>
+      <ul><li>C#</li><li>ASP.NET</li><li>SQL Server</li></ul>
+      <h3>Front end</h3>
+      <ul><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education and courses</h2>
+    <ul class="edu">
+      <li><strong>Cyber Security</strong><small>Student at Lotus University, 2024 to 2028</small></li>
+      <li><strong>Network Security</strong><small>Course, NTI</small></li>
+      <li><strong>Full Stack .NET Web Developer</strong><small>Course, DEPI</small></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Let’s work together</h2>
+    <p>Need a website or a database-driven app? Tell me what you need and I’ll reply as soon as I can.</p>
+    <div class="contact-links">
+      <a class="btn primary" href="mailto:ammarmohameed943@gmail.com">Send an email</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/ammar-eltelawy-b56348373" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/BlackClover000" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Ammar Mohamed, Minya, Egypt</div></footer>
+
+<script>
+// Scale each 1280px-wide live preview down to fit its card
+function fitFrames(){
+  document.querySelectorAll('.frame').forEach(function(f){
+    var i=f.querySelector('iframe');
+    if(i) i.style.transform='scale('+(f.clientWidth/1280)+')';
+  });
+}
+window.addEventListener('resize',fitFrames);
+window.addEventListener('load',fitFrames);
+fitFrames();
+</script>
+</body>
+</html>
